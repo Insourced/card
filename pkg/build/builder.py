@@ -6,5 +6,6 @@ class Card():
 
 def Build(name, mana, cardType):
     return Card(name, mana, cardType)
-def BuildConfig():
-    return ""
+def BuildConfig(i):
+    print(i)
+    return input(">>> ")
