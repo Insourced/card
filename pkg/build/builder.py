@@ -4,8 +4,26 @@ class Card():
         mana = self.mana
         cardType = self.cardType
 
-def Build(name, mana, cardType):
-    return Card(name, mana, cardType)
-def BuildConfig(i):
-    print(i)
-    return input(">>> ")
+
+n = ""
+m = ""
+t = ""
+
+
+def Build():
+    return Card(n, m, t)
+
+
+def Name(i):
+    global n
+    n = i
+
+
+def Mana(i):
+    global m
+    m = i
+
+
+def Type(i):
+    global t
+    t = i
