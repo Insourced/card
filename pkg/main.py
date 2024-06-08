@@ -1,37 +1,18 @@
-import build.builder as builder
-
+import build.builder as build
 
 prompt = ">>> "
-j = ""
 
-
-def _ask(i):
-    global j
+def get(i):
     i = i.lower()
-    con = f"{i} [Y/n] "
     match i:
-        case "type":
-            print("What type is your card?\n\tMonster::0\n\tGame::1")
-            j = input(prompt)
-            j = int(j)
-            if j == 0:
-                _ask(i)
-                return i
         case "name":
-            print("What name is the name of your card?")
-            j = input(prompt)
-            if j != "":
-                print("Name cannot be nil")
-                return
-        case "mana":
-            print("How much mana will this card have?")
-            j = input(prompt)
-        case _:
-            k = input(con)
-            if k == "y" or k == "":
-                return i
-            return
-    return j
+            print("What is the name of this card?")
+            return input(prompt)
 
-
-_ask("ype")
+def main():
+    print("What type of card?\n\tMagic::0\n\tCreature::1")
+    i = int(input(prompt))
+    if i > 1 or i < 0:
+        print("Error: Not valid option")
+        main()
+main()
