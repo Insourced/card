@@ -26,6 +26,8 @@ def magic():
     return build.MagicCard(get("name"), get("type"), get("mana"), get("number"), get("effect"))
 def creature():
     return
+def atk():
+    return build.Attack(get("name"), get("damage"), get("mana"))
 def main():
     print("What type of card?\n\tMagic::0\n\tCreature::1")
     i = int(input(prompt))
