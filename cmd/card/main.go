@@ -11,4 +11,5 @@ func main() {
 		arg0 = os.Args[1]
 	}
 	query.Parse(arg0)
+	return
 }
